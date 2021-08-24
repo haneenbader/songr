@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<!--loop throw each album in the model / using attribute name albums-->
+      <div th:each="album : ${albums}">
+          <div>
+<!--               <img  th:src="${album.imgUrl}">-->
+          </div>
+          <div>
+               <h3> Album Name  : <span th:text="${album.title}"> </span></h3>
+               <p> Artist Name  : <span th:text="${album.artist}"> </span></p>
+               <p> Song  Count  : <span th:text="${album.songCount}"> </span></p>
+               <p> Album Length : <span th:text="${album.length }"> </span></p>
+          </div>
+       </div>
 </body>
 </html>

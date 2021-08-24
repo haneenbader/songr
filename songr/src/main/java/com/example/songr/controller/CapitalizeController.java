@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller //without this notation we cant acsess this rout
-public class Capitalize {
+public class CapitalizeController {
     @GetMapping ("/capitalize/{AnyCase}")
 
     public String Capitalize(@PathVariable String AnyCase , Model model) {
