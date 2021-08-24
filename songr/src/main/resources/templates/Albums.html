@@ -7,6 +7,31 @@
 
 </head>
 <body>
+<form action="#" th:action="@{/addAlbum}" method="post">
+
+    <label>Album Title:</label>
+    <input type="text" name="title"  required/>
+    <br>
+    <label>Artist:</label>
+    <input type="text" name="artist" required/>
+    <br>
+    <label>Song Count:</label>
+    <input type="number" name="songCount"  required />
+    <br>
+    <label>Length:</label>
+    <input type="number" name="length" required/>
+    <br>
+    <label>Image URL:</label>
+    <input type="text" name="imageUrl"  required />
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
+
+
+
+
+
+
 
 <!--loop throw each album in the model / using attribute name albums-->
 
