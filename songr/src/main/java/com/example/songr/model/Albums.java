@@ -7,7 +7,7 @@ public class Albums {
     private  String artist ;
     private  int songCount ;
     private  int length  ;
-    private  String imageUrl ;
+    private  String imgUrl ;
 
 //generate getter and setter
     public String getTitle() {
@@ -42,12 +42,12 @@ public class Albums {
         this.length = length;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
 //generate constructor
@@ -56,6 +56,6 @@ public class Albums {
         this.artist = artist;
         this.songCount = songCount;
         this.length =length ;
-        this.imageUrl =imgUrl ;
+        this.imgUrl =imgUrl ;
     }
 }
