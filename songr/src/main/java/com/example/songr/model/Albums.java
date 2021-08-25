@@ -25,8 +25,8 @@ public class Albums {
     private  int length ;
     private  String imgUrl ;
 
-    //relation one album to many  songs
-    @OneToMany(mappedBy ="album")
+    //relation one album to many  songs(mappedBy = name of collection on db//attributeName)
+    @OneToMany(mappedBy ="albums")
     private List<Song> songs;
 
 //generate getter and setter

@@ -15,7 +15,16 @@ public class Song  {
     private int trackNumber ;
 //relation between albums and song (many song to one album)
     @ManyToOne
-    private Albums album;
+    private Albums albums;
+
+    public Song(){
+    }
+
+    public Song(String title , int length ,int trackNumber) {
+        this.title =title ;
+        this.length =length ;
+        this.trackNumber=trackNumber;
+    }
 
     public int getId() {
         return id;
@@ -43,11 +52,4 @@ public class Song  {
         this.trackNumber = trackNumber;
     }
 
-
-    public Song(String title , int length ,int trackNumber) {
-        this.title =title ;
-        this.length =length ;
-        this.trackNumber=trackNumber;
-
-    }
 }

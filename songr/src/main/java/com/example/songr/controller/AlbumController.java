@@ -24,10 +24,10 @@ public class AlbumController {
         return "Albums.html";
     }
 
-//        commit it after added to DB
-    // post request
+
+//     post request   //     commit it after added to DB
 //    @GetMapping("/newAlbums") // this should be a post, we are just adding it as get to run the function without using a form
-    //create + save + return
+//    create + save + return
 //    public RedirectView addNewAlbums() {
 //        Albums albums1 = new Albums ("Baby shark" , "Pinkfong Songs " ,5 ,4020, "https://images-na.ssl-images-amazon.com/images/S/sgp-catalog-images/region_US/daag1-CW999FTDJ35-Full-Image_GalleryBackground-en-US-1605902446047._SX1080_.png");
 //        Albums albums2 = new Albums ("Wheels on the Bus " , "CoComelon " ,3 ,3255, "https://cdns-images.dzcdn.net/images/cover/f8598dd0d54c5c5ca38eaade0e7f5dbe/500x500.jpg");
@@ -36,7 +36,7 @@ public class AlbumController {
 //        albumsRepository.save(albums1);
 //        albumsRepository.save(albums2);
 //        albumsRepository.save(albums3);
-
+//
 //        return new RedirectView("/albums");
 //    }
 @PostMapping("/addAlbum")
