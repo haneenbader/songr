@@ -13,7 +13,16 @@ public class Song  {
     private String title ;
     private int length ;
     private int trackNumber ;
-//relation between albums and song (many song to one album)
+
+    public Albums getAlbums() {
+        return albums;
+    }
+
+    public void setAlbums(Albums albums) {
+        this.albums = albums;
+    }
+
+    //relation between albums and song (many song to one album)
     @ManyToOne
     private Albums albums;
 
