@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main>
+    <div >
+        <div>
+        <h1> Song collection</h1>
+        </div>
+        <div th:each="song : ${song}" >
+            <h4>Song title :<span th:text="${song.title}"></span></h4>
+            <p>Song length :<span th:text="${song.length}"></span></p>
+            <p>Track number :<span th:text="${song.trackNumber}"></span></p>
+        </div>
+    </div>
+</main>
+</body>
+</html>

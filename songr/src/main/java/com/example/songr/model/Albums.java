@@ -1,13 +1,33 @@
 package com.example.songr.model;
+import javax.persistence.*;
+import java.util.List;
 
+
+@Entity //
 public class Albums {
+//    connection with DB
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  int id ;
 
-//    declare  variable
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // declare  variable
     private  String title ;
     private  String artist ;
     private  int songCount ;
-    private  int length  ;
+    private  int length ;
     private  String imgUrl ;
+
+    //relation one album to many  songs(mappedBy = name of collection on db//attributeName)
+    @OneToMany(mappedBy ="albums")
+    private List<Song> songs;
 
 //generate getter and setter
     public String getTitle() {
@@ -51,7 +71,11 @@ public class Albums {
     }
 
 //generate constructor
-    public Albums(String title , String artist ,int songCount , int length, String imgUrl) {
+
+    public Albums() {  // empty constructor whith out it we cant see result after add DB  to project
+    }
+
+    public Albums(String title , String artist , int songCount , int length, String imgUrl) {
         this.title=title ;
         this.artist = artist;
         this.songCount = songCount;
